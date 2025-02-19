@@ -43,7 +43,68 @@ public class VendingMachine {
 
         /*Part 1: Arrays and try/catch to set up the base of the program, by Henry*/
 
-        
+        while (!done) {
+            while (i < 5) {
+                while (j < 5) {
+
+                    System.out.print(vendingLayout[i][j]);
+
+                    while (j < 4) {
+
+                        System.out.print(" | ");
+                        break;
+                    }
+                    j++;
+                }
+                j = 0;
+                //prints product name row
+
+                
+                System.out.println("");
+                while (j < 5) {
+                    vendingLength = vendingLayout[i][j].length();
+
+
+                    System.out.print("$" + formatter.format(priceLayout[i][j]));
+                    while (j < 4) {
+                        k = 3;
+                        while ((vendingLength) > k) {
+                            System.out.print(" ");
+                            k++;
+                        }
+                        k = 0;
+                        System.out.print("| ");
+                        break;
+                    }
+                    j++;
+                }
+                j = 0;
+                //prints price row
+
+
+                System.out.println("");
+                while (j < 5) {
+
+                    System.out.print(letterArray[i] + (j+1));
+                    k = 1;
+                    while (j < 4) {
+                        while ((vendingLength) > k) {
+                            System.out.print(" ");
+                            k++;
+                        }
+                        k = 0;
+                        System.out.print(" | ");
+                        break;
+                    }
+                    j++;
+                }
+                j = 0;
+                //prints label row
+
+                System.out.println("");
+                System.out.println("");
+                i++;
+            }
 
         } catch (StringIndexOutOfBoundsException e) {
             System.out.println("java.lang.StringIndexOutOfBoundsException");
